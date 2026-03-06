@@ -1,0 +1,38 @@
+.page-banner {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 220px 0px 100px 0px;
+}
+
+.page-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.page-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-banner h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: var(--default-font);
+  font-weight: 500;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
