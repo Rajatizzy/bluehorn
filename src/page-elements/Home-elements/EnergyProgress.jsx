@@ -2,8 +2,8 @@ import {
   FaIndustry,
   FaBuilding,
   FaHospital,
-  FaCity,
-  FaGasPump,
+  FaSchool,
+  FaHotel,
   FaHome,
 } from "react-icons/fa";
 
@@ -11,9 +11,9 @@ const sectors = [
   { title: "Industries", icon: <FaIndustry /> },
   { title: "Commercial Establishments", icon: <FaBuilding /> },
   { title: "Healthcare Centres", icon: <FaHospital /> },
-  { title: "Housing Society", icon: <FaCity /> },
-  { title: "Petrol Pumps", icon: <FaGasPump /> },
-  { title: "Residential", icon: <FaHome /> },
+  { title: "Hotel", icon: <FaHotel /> },
+  { title: "Education Institute", icon: <FaSchool /> },
+  { title: "Residential & Housing Society", icon: <FaHome /> },
 ];
 
 export default function EnergyProgress() {

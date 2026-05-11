@@ -94,7 +94,8 @@ body {
   background-color: var(--accent-color);
   border-radius: 30px;
   font-weight: 600;
-  color: var(--white-color);
+  /* color: var(--white-color); */
+  color: var(--primary-color1);
   box-shadow: 0 0 0 2px #ffffff;
   cursor: pointer;
   overflow: hidden;
@@ -111,7 +112,7 @@ body {
 .animated-button svg {
   position: absolute;
   width: 24px;
-  fill: var(--white-color);
+  fill: var(--primary-color1);
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -179,7 +180,7 @@ body {
 }
 
 .title {
-  font-size: 45px;
+  font-size: 40px;
   line-height: 55px;
   color: var(--primary-color1) !important;
   font-weight: 500;
@@ -223,7 +224,9 @@ body {
   line-height: 70px;
   color: var(--white-color);
   font-weight: 500;
-  font-family: var(--default-font1);
+  font-family: var(--default-font);
+  /* font-family: var(--accent-font); */
+  /* font-family: "Cormorant Garamond"; */
   /* padding-top: 15px; */
   /* text-transform: capitalize; */
 }

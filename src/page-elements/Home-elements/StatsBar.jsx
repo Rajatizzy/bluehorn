@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { FaSolarPanel, FaUsers, FaAward, FaStar } from "react-icons/fa";
+import { FaSolarPanel, FaUsers, FaBolt, FaLeaf } from "react-icons/fa";
 
 const statsData = [
-  { value: 1000, label: "Project Done", icon: <FaSolarPanel /> },
-  { value: 1200, label: "Happy Clients", icon: <FaUsers /> },
-  { value: 850, label: "Award Winning", icon: <FaAward /> },
-  { value: 1100, label: "Rating Customer", icon: <FaStar /> },
+  { value: 30, label: "Projects Completed", icon: <FaSolarPanel /> },
+  { value: 25, label: "Happy Clients", icon: <FaUsers /> },
+  { value: 1500, label: "Kilowatts Installed", icon: <FaBolt /> },
+  { value: 2500, label: "Tonnes of CO₂ Eliminated", icon: <FaLeaf /> },
 ];
 
 const StatsBar = () => {

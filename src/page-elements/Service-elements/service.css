@@ -1,0 +1,55 @@
+.service-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.service-menu {
+  list-style: none;
+  padding: 20px;
+  background: #f4f7f5;
+  border-radius: 12px;
+}
+
+.service-menu li {
+  padding: 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.service-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.service-menu li.active a {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.service-help {
+  background: #f4f7f5;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.help-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.help-box p {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.benefit-card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}

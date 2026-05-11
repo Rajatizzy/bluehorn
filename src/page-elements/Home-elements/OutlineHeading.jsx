@@ -7,10 +7,13 @@ export default function MarqueeText() {
     <section className="marquee-section">
       <div className="marquee">
         <span>
-          / REAP THE RETURNS &nbsp; / REAP THE RETURNS &nbsp; / REAP THE RETURNS
+          Brown & Dusty → Green & Clean &nbsp; / &nbsp; Brown & Dusty → Green &
+          Clean &nbsp; / &nbsp; Brown & Dusty → Green & Clean
         </span>
+
         <span>
-          / REAP THE RETURNS &nbsp; / REAP THE RETURNS &nbsp; / REAP THE RETURNS
+          Brown & Dusty → Green & Clean &nbsp; / &nbsp; Brown & Dusty → Green &
+          Clean &nbsp; / &nbsp; Brown & Dusty → Green & Clean
         </span>
       </div>
     </section>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
-import videoThumb from "../../assets/img/video-bg.jpg";
+import videoThumb from "../../assets/img/blu8.jpg";
 
 const VideoSection = () => {
   const [open, setOpen] = useState(false);

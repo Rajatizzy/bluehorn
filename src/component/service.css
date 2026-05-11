@@ -1,0 +1,485 @@
+.service-page {
+  margin: 80px 0px;
+}
+.service-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.service-menu {
+  list-style: none;
+  padding: 20px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-menu li {
+  padding: 12px;
+}
+
+.service-menu li:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.service-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-family: var(--default-font);
+}
+
+.service-menu li.active a {
+  color: var(--primary-color);
+  font-weight: 600;
+
+  font-family: var(--default-font);
+}
+
+.service-help {
+  background: #f4f7f5;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.help-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.help-box p {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-help {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.help-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff6600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+.new-po {
+  width: 100% !important;
+  height: 450px !important;
+  object-fit: cover;
+  border-radius: 22px !important;
+}
+
+.benefit-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.planning-section {
+  margin-top: 30px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.benefit-card p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  /* font-family: var(d); */
+}
+@media (max-width: 992px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.planning-wrapper {
+  padding: 40px 0;
+}
+
+.planning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.planning-image img {
+  width: 100%;
+  border-radius: 25px;
+  height: 500px;
+}
+
+.planning-content h4 {
+  margin-bottom: 15px;
+}
+
+.planning-content p {
+  color: #6c757d;
+  margin-bottom: 15px !important;
+}
+
+.planning-list {
+  list-style: none;
+  padding: 0;
+}
+
+.planning-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-family: var(--default-font);
+  font-size: 16px;
+}
+
+.plan-icon {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.faq-item {
+  margin-bottom: 12px;
+}
+
+.faq-question {
+  background: #f3f3f3;
+  padding: 16px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  transition: 0.3s;
+  font-family: var(--default-font);
+}
+
+.faq-question.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.faq-answer {
+  padding: 15px 20px;
+  color: #666;
+  line-height: 1.6;
+}
+.service-help-card {
+  background: #f4f4f4;
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.help-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 22px 22px 0 0;
+}
+.service-help-card {
+  margin-top: 40px;
+}
+.help-icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  margin: -35px auto 10px;
+  border: 5px solid #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.help-content h6 {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #1a1a1a;
+  margin-bottom: 10px !important;
+  font-size: 16px;
+}
+
+.help-phone a {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* how we */
+.solar-process-section {
+  padding: 0px 0px 80px 0px;
+}
+
+.solar-process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  /* align-items: center; */
+}
+
+.solar-process-image img {
+  width: 100%;
+  border-radius: 22px;
+}
+
+.solar-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.solar-step-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.solar-step-number {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solar-step-item h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.solar-step-item p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===============================
+   INDUSTRY SECTION
+================================ */
+
+.industry-zone-section {
+  padding: 80px 0;
+  background: #f5f6f3;
+}
+
+.industry-zone-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* GRID */
+
+.industry-zone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+
+.industry-zone-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #c5d18a;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.industry-zone-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+
+.industry-zone-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* TITLE BAR */
+
+.industry-zone-title {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 12px 10px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+  .industry-zone-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .industry-zone-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767.78px) {
+  .service-page {
+    margin: 60px 0px;
+  }
+  .new-po {
+    margin-top: 40px;
+    height: auto;
+  }
+  .planning-grid {
+    grid-template-columns: 1fr;
+  }
+  .planning-wrapper {
+    padding: 30px 0;
+  }
+  .faq-question {
+    padding: 16px 10px;
+    font-size: 15px;
+  }
+  .solar-process-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .solar-process-section {
+    padding: 0px 0px 60px 0px;
+  }
+  .industry-zone-section {
+    padding: 60px 0px 40px 0px;
+    background: #f5f6f3;
+  }
+  .planning-image img {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .service-page {
+    margin: 60px 0px;
+  }
+  .new-po {
+    margin-top: 40px;
+    height: auto;
+  }
+  .planning-grid {
+    grid-template-columns: 1fr;
+  }
+  .planning-wrapper {
+    padding: 40px 0;
+  }
+  .faq-question {
+    padding: 16px 10px;
+    font-size: 15px;
+  }
+  .solar-process-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .solar-process-section {
+    padding: 0px 0px 60px 0px;
+  }
+  .industry-zone-section {
+    padding: 60px 0px 40px 0px;
+    background: #f5f6f3;
+  }
+  .planning-image img {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .planning-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

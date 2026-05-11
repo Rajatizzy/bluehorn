@@ -1,32 +1,34 @@
 // src/components/Footer.jsx
+
 import logo from "../assets/img/Blue_Horn.png";
+// import logo from "../assets/img/Blue-Horn-Logo.png";
+// import logo from "../assets/img/Blue-Horn-Solar-logo.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 import {
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
-  FaFacebookF,
+  // FaFacebookF,
   FaLinkedinIn,
-  FaTwitter,
-  FaInstagram,
+  // FaTwitter,
+  // FaInstagram,
 } from "react-icons/fa";
-
-// import "./footer.css";
 
 const topContacts = [
   {
     title: "Support & Email",
-    value: "info@domainname.com",
+    value: "gogreen@bluehorntechnologies.com",
     icon: <FaEnvelope />,
   },
   {
     title: "Customer Support",
-    value: "+01547 547 5478",
+    value: "+91 6293122232",
     icon: <FaPhoneAlt />,
   },
   {
     title: "Our Location",
-    value: "Street no, City, Country",
+    value: "Unit 14B, Globsyn Crystals, Sector -5, Salt Lake, kolkata 700091",
     icon: <FaMapMarkerAlt />,
   },
 ];
@@ -50,18 +52,38 @@ const usefulLinks = [
 ];
 
 const socials = [
-  <FaFacebookF />,
+  // <FaFacebookF />,
   <FaLinkedinIn />,
-  <FaTwitter />,
-  <FaInstagram />,
+  // <FaTwitter />,
+  // <FaInstagram />,
 ];
 
 export default function Footer() {
   return (
     <footer className="main-footer">
       <div className="container">
-        {/* TOP BAR */}
+        {/* FOOTER TOP (NOW 4 GRID ITEMS) */}
         <div className="footer-top">
+          {/* BRAND SECTION */}
+          <div className=" brand-item">
+            <img src={logo} alt="Solor Logo" className="footer-logo" />
+
+            <p className="py-3">
+              Powering industries, businesses, and homes across India with clean
+              solar energy.
+            </p>
+
+            <div className="socials">
+              <h5>Social Link</h5>
+              <a href="https://in.linkedin.com/company/bhtsolar">
+                {socials.map((icon, i) => (
+                  <span key={i}>{icon}</span>
+                ))}
+              </a>
+            </div>
+          </div>
+
+          {/* CONTACT ITEMS */}
           {topContacts.map((item, i) => (
             <div className="top-item" key={i}>
               <span className="f-icn">{item.icon}</span>
@@ -73,24 +95,8 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* MAIN CONTENT */}
-        <div className="footer-content container">
-          {/* BRAND */}
-          <div>
-            <img src={logo} alt="Solor Logo" className="footer-logo" />
-            <p className="py-3">
-              Green Energy is a long established fact that a reader will be
-              distracted by the readable content of a page when.
-            </p>
-
-            <div className="socials">
-              {socials.map((icon, i) => (
-                <span key={i}>{icon}</span>
-              ))}
-            </div>
-          </div>
-
-          {/* QUICK LINKS */}
+        {/* FOOTER CONTENT */}
+        {/* <div className="footer-content">
           <div>
             <h4>Quick Links</h4>
             <ul>
@@ -100,7 +106,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* SERVICES */}
           <div>
             <h4>Services</h4>
             <ul>
@@ -110,7 +115,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* USEFUL LINKS */}
           <div>
             <h4>Useful Links</h4>
             <ul>
@@ -119,13 +123,23 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
 
         {/* COPYRIGHT */}
         <div className="footer-bottom">
-          Copyright © {new Date().getFullYear()} Solor. All rights reserved.
+          Copyright © {new Date().getFullYear()} Bluehorn. All rights reserved.
         </div>
       </div>
+
+      {/* WHATSAPP FLOAT BUTTON */}
+      <a
+        href="https://wa.me/916293122232?text=Hello%20BlueHorn%20Team%2C%20I%20want%20to%20know%20more"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+      >
+        <FaWhatsapp />
+      </a>
     </footer>
   );
 }

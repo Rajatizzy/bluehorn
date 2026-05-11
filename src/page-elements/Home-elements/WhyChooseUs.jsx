@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
           <span className="highlight">Expertise Meet</span>
         </h2>
 
-        <p
+        {/* <p
           className="para text-center"
           data-aos="fade-up"
           data-aos-duration="1200"
@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
           technical expertise, <br /> financial transparency, and a client-first
           approach to deliver solar solutions that consistently outperform
           expectations.
-        </p>
+        </p> */}
 
         <div className="why-grid">
           {features.map((item, i) => (

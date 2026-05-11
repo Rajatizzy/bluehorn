@@ -1,11 +1,29 @@
 .workprocess-space {
   margin-top: 80px;
 }
+.about-product-section {
+  padding: 0px 0px 120px 0px;
+}
+.about-product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 767.78px) {
+  .about-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    order: -1;
+  }
+}
 
 /* testimonail */
 
 .testimonial-section {
-  padding: 100px 0;
+  padding: 80px 0;
   background: #f5f5f5;
 }
 
@@ -75,10 +93,17 @@
   /* background: #f8f8f8; */
   background: #ede9e9;
 }
+/* GRID */
 
+.team-grid {
+  /* margin-top: 50px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
 .team-card {
   margin-top: 50px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   gap: 40px;
   background: #fff;
@@ -91,10 +116,13 @@
 }
 
 .team-image img {
-  width: 250px;
-  height: 250px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 15px;
+  margin: auto;
+  display: block;
+  margin: auto;
 }
 
 .team-info h3 {
@@ -102,20 +130,27 @@
   margin-bottom: 10px !important;
   font-family: var(--default-font);
   font-weight: 500;
+  text-align: center;
+  margin-top: 25px;
 }
 
 .team-info h5 {
   color: var(--primary-color);
   margin-bottom: 15px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .team-info p {
-  color: #666;
+  color: var(--primary-color1);
   line-height: 1.6;
+  text-align: center;
+  font-family: var(--default-font);
 }
 
 .team-social {
   margin-top: 15px;
+  text-align: center;
 }
 
 .team-social a {
@@ -134,6 +169,19 @@
 .team-social a:hover {
   background: var(--accent-color);
 }
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media screen and (max-width: 767.78px) {
   .testimonial-section {
@@ -147,7 +195,7 @@
   }
   .team-image img {
     margin-bottom: 20px;
-    width: 100%;
+    width: auto;
   }
   .team-card {
     margin-top: 30px;
@@ -157,6 +205,22 @@
   }
   .workprocess-space {
     margin-top: 60px;
+  }
+  .about-product-section {
+    padding: 0px 0px 60px 0px;
+  }
+  .whysolar-wrapper {
+    padding: 60px 0 !important;
+    margin-bottom: 60px !important;
+  }
+  .aboutfaq-wrapper {
+    padding: 60px 0px !important;
+  }
+  .stat-item p {
+    font-size: 16px;
+  }
+  .about-list {
+    margin-bottom: 0px;
   }
 }
 
@@ -172,7 +236,7 @@
   }
   .team-image img {
     margin-bottom: 20px;
-    width: 100%;
+    width: auto;
   }
   .team-card {
     margin-top: 30px;
@@ -180,7 +244,177 @@
   .team-card {
     padding: 30px 20px 30px 20px;
   }
+  .about-product-section {
+    padding: 0px 0px 60px 0px;
+  }
+  .whysolar-wrapper {
+    padding: 60px 0px !important;
+  }
+  .aboutfaq-wrapper {
+    padding: 60px 0px !important;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+/* about faq */
+
+.aboutfaq-wrapper {
+  padding: 80px 0;
+  background: #f9fbff;
+}
+
+.aboutfaq-header {
+  margin-bottom: 40px;
+}
+
+/* FAQ BOX */
+.aboutfaq-wrapper {
+  padding: 80px 0;
+  background: #f7f9fc;
+}
+
+.aboutfaq-header {
+  margin-bottom: 40px;
+}
+
+.aboutfaq-subtitle {
+  color: #2a6df4;
+  font-weight: 600;
+}
+
+.aboutfaq-title {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.aboutfaq-title span {
+  color: #2a6df4;
+}
+
+/* LIST */
+
+.aboutfaq-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.aboutfaq-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 0;
+}
+
+/* QUESTION ROW */
+
+.aboutfaq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: var(--default-font);
+}
+
+.aboutfaq-qleft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.aboutfaq-qicon {
+  color: var(--accent-color);
+  font-size: 30px;
+}
+
+/* ANSWER */
+
+.aboutfaq-answer {
+  margin-top: 10px;
+  padding-left: 32px;
+  color: #555;
+  line-height: 1.7;
+  font-family: var(--default-font);
+  font-size: 16px;
+}
+
+/* TOGGLE */
+
+.aboutfaq-toggle {
+  font-size: 22px;
+  color: #2a6df4;
+}
+
+/* why solar */
+
+.whysolar-wrapper {
+  padding: 80px 0;
+  background: #eff1ed;
+  margin-bottom: 100px;
+}
+
+.whysolar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.whysolar-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+}
+
+.whysolar-card h2 {
+  /* font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1c2b4a; */
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.whysolar-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #e5e7eb;
+}
+
+.whysolar-card .solar {
+  color: var(--accent-color);
+}
+span.save {
+  font-size: 18px;
+  font-family: var(--default-font);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.highlight-blue {
+  color: var(--primary-color) !important;
+}
+
+.whysolar-card p {
+  color: var(--primary-color1);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+  .whysolar-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-pr img {
+  width: 100% !important;
 }

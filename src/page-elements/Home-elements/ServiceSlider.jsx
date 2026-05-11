@@ -1,90 +1,87 @@
-// src/components/ServiceSlider.jsx
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
 import img1 from "../../assets/img/service-2.jpg";
-import img2 from "../../assets/img/service-3.jpg";
+import img2 from "../../assets/img/blu.jpg";
 import img3 from "../../assets/img/service-4.jpg";
-import img4 from "../../assets/img/service-5.jpg";
+import img4 from "../../assets/img/blu2.jpg";
+import img5 from "../../assets/img/blu6.jpg";
+import img6 from "../../assets/img/blu3.jpg";
 import {
-  FaSolarPanel,
+  FaChartLine,
+  FaHandshake,
+  FaDraftingCompass,
+  FaHardHat,
   FaLeaf,
-  FaBolt,
-  FaChargingStation,
+  FaTools,
 } from "react-icons/fa";
 
 const services = [
   {
-    title: "On-Grid Rooftop (Solar + Grid)",
-    desc: "Harness solar power while staying connected to the grid.",
+    title: "Energy Analysis",
+    desc: "Thorough assessment of your energy consumption to identify the most effective solar solution.",
     img: img1,
-    icon: <FaBolt />,
+    icon: <FaChartLine />, // analysis / audit
   },
   {
-    title: "Hybrid Rooftop/Ground (Solar + Grid + Batteries) ",
-    desc: "Solar power with battery backup for uninterrupted energy supply.",
+    title: "Liaison and Finance",
+    desc: "End-to-end financial guidance and stakeholder coordination to ensure a seamless project journey.",
     img: img2,
-    icon: <FaSolarPanel />,
+    icon: <FaHandshake />, // coordination + finance partnership
   },
   {
-    title: "Ground Mounted (Utility Scale Solar) ",
-    desc: "High-capacity solar installations engineered for large-scale power generation.",
+    title: "Design and Consultation",
+    desc: "Precision-engineered solar system designs tailored to your site, scale, and energy requirements.",
     img: img3,
-    icon: <FaLeaf />,
+    icon: <FaDraftingCompass />, // engineering design
   },
-  // {
-  //   title: "EV Charging",
-  //   desc: "Fast and smart EV charging stations powered by renewable energy.",
-  //   img: img4,
-  //   icon: <FaChargingStation />,
-  // },
+  {
+    title: "PMC and Commissioning",
+    desc: "Professional project management and safe, quality-driven installation from groundbreaking to commissioning.",
+    img: img4,
+    icon: <FaHardHat />, // construction supervision
+  },
+  {
+    title: "Credits and ESG Consultation",
+    desc: "Strategic guidance on carbon credits, renewable energy trading, and achieving top ESG ratings.",
+    img: img5,
+    icon: <FaLeaf />, // sustainability / ESG
+  },
+  {
+    title: "Operation and Maintenance",
+    desc: "Lifelong plant monitoring and maintenance partnerships ensuring consistent and efficient energy generation.",
+    img: img6,
+    icon: <FaTools />, // maintenance
+  },
 ];
-
 const ServiceSlider = () => {
   return (
     <section className="service-slider-wrapper">
       <div className="container">
         <h5 className="sub-txt text-center">Our services</h5>
+
         <h2 className="title text-animate text-center">
-          Solar Solutions Engineered{" "}
-          <span className="highlight">for Every Need</span>
+          Solar Solutions Engineered from{" "}
+          <span className="highlight">Start to Finish</span>
         </h2>
 
-        <p
-          className="para  text-center"
-          data-aos="fade-up"
-          data-aos-duration="1200"
-        >
+        {/* <p className="para text-center">
           Blue Horn Technologies brings together technical expertise, financial
-          acumen, and a client-first approach to deliver solar solutions that go
-          beyond installation. <br /> Every system we design is a long-term
-          investment in energy independence and operational efficiency.
-        </p>
-        <div className="service-sec">
-          <Swiper
-            spaceBetween={30}
-            loop={true}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {services.map((service, index) => (
-              <SwiperSlide key={index}>
-                <div className="service-card">
-                  <img src={service.img} alt={service.title} />
+          acumen, and a client-first approach to guide you through every stage
+          of your solar journey, from the first assessment to lifelong
+          operation.
+        </p> */}
 
-                  <div className="icon">{service.icon}</div>
+        <div className="service-grid">
+          {services.map((service, index) => (
+            <div className="service-card" key={index}>
+              <img src={service.img} alt={service.title} />
 
-                  <div className="content">
-                    <h4>{service.title}</h4>
-                    <p>{service.desc}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              <div className="icon">{service.icon}</div>
+
+              <div className="content">
+                <h4>{service.title}</h4>
+                <p>{service.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

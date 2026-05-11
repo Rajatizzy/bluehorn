@@ -1,6 +1,6 @@
 import React from "react";
-import { FaPhoneAlt } from "react-icons/fa";
-import img from "../assets/img/cta-image.jpg";
+import { FaWhatsapp } from "react-icons/fa";
+import img from "../assets/img/blu6.jpg";
 
 const CTA = () => {
   return (
@@ -9,9 +9,14 @@ const CTA = () => {
         <img src={img} alt="cta" />
 
         <div className="cta-content">
-          <a href="tel:+919876543210" className="frdf">
+          <a
+            href="https://wa.me/916293122232"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="frdf"
+          >
             <div className="cta-icon">
-              <FaPhoneAlt />
+              <FaWhatsapp />
             </div>
           </a>
 

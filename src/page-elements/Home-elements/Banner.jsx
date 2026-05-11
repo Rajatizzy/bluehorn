@@ -1,20 +1,25 @@
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import banner1 from "../../assets/img/hero.jpg";
+import banner1 from "../../assets/img/blu0.jpg";
 // import banner2 from "../../assets/img/banner2.jpg";
 // import banner3 from "../../assets/img/banner3.jpg";
 
 function Banner() {
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   const carouselData = [
     {
       id: 1,
-      subtitle: "Welcome to Bluehorn Technologies ",
+      subtitle: "Welcome to Blue Horn Technologies ",
       // title: "Powering the Future With Renewable.",
       title: (
-        <>End-to-End Solar EPC Solutions for Homes, Businesses & Industries </>
+        <>End-to-End Solar EPC Solutions for Industries, Businesses & Homes </>
       ),
       description:
-        "Duis ultricies, tortor a accumsan fermentum, purus diam mollis velit, eu bibendum ipsum erat quis leo. Vestibulum finibus, leo dapibus feugiat rutrum, augue lacus rhoncus velit, vel scelerisque odio est.",
+        "Blue Horn Technologies designs, builds, and maintains solar plants at fixed service fees.",
       image: banner1,
       link: "/contact",
     },
@@ -46,17 +51,53 @@ function Banner() {
                   <p className="h1-para fade-animate-up">{item.description}</p>
 
                   <div className="hero-btns mt-4">
-                    <Link to={item.link}>
-                      <button className="animated-button me-3">
-                        Explore More
+                    <Link to="/about">
+                      <button className="animated-button fade-animate-up">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="arr-2"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
+
+                        <span className="text">Explore More</span>
+
+                        <span className="circle"></span>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="arr-1"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
                       </button>
                     </Link>
 
-                    <Link to="/about">
-                      <button className="animated-button outline-btn">
+                    <a href="#frm">
+                      {/* <button className="animated-button outline-btn">
                         Contact
+                      </button> */}
+                      <button class="animated-button fade-animate-up outline-btn">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="arr-2"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
+                        <span class="text">Contact</span>
+                        <span class="circle"></span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="arr-1"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
                       </button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

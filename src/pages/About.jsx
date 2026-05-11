@@ -1,32 +1,66 @@
-import Header from "../component/Header";
-import Footer from "../component/Footer";
-import OutlineHeading from "../page-elements/Home-elements/OutlineHeading";
+import { Helmet } from "react-helmet-async";
+
+import { useEffect, useState } from "react";
+
 import AboutBanner from "../page-elements/About-elements/AboutBanner";
-import AboutSection from "../page-elements/Home-elements/AboutSection";
-import WorkProcess from "../page-elements/Home-elements/WorkProcess";
+
+import AboutMid from "../page-elements/About-elements/AboutMid";
+
 import StatsBar from "../page-elements/Home-elements/StatsBar";
+
 import CTA from "../component/CTA";
-import WhyChooseUs from "../page-elements/Home-elements/WhyChooseUs";
+
 import "../page-elements/About-elements/about.css";
+
 import TestimonialSlider from "../page-elements/About-elements/TestimonialSlider";
+
 import OurTeam from "../page-elements/About-elements/OurTeam";
 
+import AboutProduct from "../page-elements/About-elements/AboutProduct";
+
+import AboutFaq from "../page-elements/About-elements/AboutFaq";
+
+import WhySolarSection from "../page-elements/About-elements/WhySolarSection";
+
 const Contact = () => {
+  const [seo, setSeo] = useState({});
+
+  useEffect(() => {
+    fetch("https://dsks.co.in/blue/wp-json/wp/v2/pages?slug=about")
+      .then((res) => res.json())
+
+      .then((data) => {
+        if (data.length > 0) {
+          setSeo({
+            title: data[0].yoast_head_json?.title,
+
+            description: data[0].yoast_head_json?.description,
+          });
+        }
+      });
+  }, []);
+
   return (
     <>
-      <Header />
+      <Helmet>
+        <title>{seo.title}</title>
+
+        <meta name="description" content={seo.description} />
+      </Helmet>
+
       <AboutBanner />
-      <AboutSection />
-      <WhyChooseUs />
-      <div className="workprocess-space">
-        <WorkProcess />
-      </div>
+
+      <AboutMid />
+
+      <AboutProduct />
+
+      <AboutFaq />
+
+      <WhySolarSection />
+
       <CTA />
+
       <StatsBar />
-      <TestimonialSlider />
-      <OurTeam />
-      <OutlineHeading />
-      <Footer />
     </>
   );
 };
